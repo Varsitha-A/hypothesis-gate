@@ -35,7 +35,7 @@ const Home = () => {
         <h1>Welcome to Hypothesis-Gate</h1>
         <p>
           A centralized platform to submit, review, and manage student research ideas.
-          Streamline the process, collaborate with mentors, and bring your ideas to life.
+          Streamline the process, collaborate with mentors, and bring your ideas to life...
         </p>
         {!user && (
           <p className="login-message">
