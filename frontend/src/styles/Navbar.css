@@ -1,0 +1,215 @@
+/* =========================
+   Navbar.css (Ultra-clean | Elegant | Blue/White | Unique)
+========================= */
+
+:root {
+  --b900: #0b2a6b;
+  --b700: #1e40af;
+  --b600: #2563eb;
+  --b400: #60a5fa;
+
+  --ink: #0f172a;
+  --muted: #64748b;
+
+  --w: #ffffff;
+  --bg: #f5f8ff;
+
+  --line: rgba(37, 99, 235, 0.14);
+  --soft: rgba(2, 25, 75, 0.08);
+  --shadow: 0 18px 45px rgba(2, 25, 75, 0.10);
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  overflow: hidden;
+}
+
+.navbar::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--b900), var(--b600), var(--b400));
+  opacity: 0.9;
+}
+
+/* =========================
+   LOGO
+========================= */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  font-weight: 950;
+  font-size: 18px;
+  color: var(--b900);
+  text-decoration: none;
+
+  padding: 10px 12px;
+  border-radius: 14px;
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+
+.logo::before {
+  content: "HG";
+  display: grid;
+  place-items: center;
+
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, rgba(11, 42, 107, 0.12), rgba(37, 99, 235, 0.10));
+  border: 1px solid rgba(37, 99, 235, 0.18);
+
+  color: var(--b700);
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.logo:hover {
+  background: rgba(37, 99, 235, 0.06);
+  transform: translateY(-1px);
+}
+
+/* =========================
+   LINKS
+========================= */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  position: relative;
+  padding: 10px 12px;
+  border-radius: 14px;
+
+  font-size: 14px;
+  font-weight: 850;
+  color: var(--ink);
+  text-decoration: none;
+
+  background: transparent;
+  border: 1px solid transparent;
+
+  transition: all 0.18s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 7px;
+  height: 2px;
+
+  background: linear-gradient(90deg, var(--b900), var(--b600), var(--b400));
+  border-radius: 999px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.22s ease;
+}
+
+.nav-link:hover {
+  background: rgba(37, 99, 235, 0.06);
+  border-color: rgba(37, 99, 235, 0.12);
+  transform: translateY(-1px);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.nav-link.active {
+  background: rgba(37, 99, 235, 0.08);
+  border-color: rgba(37, 99, 235, 0.18);
+  color: var(--b900);
+}
+
+/* =========================
+   LOGOUT BUTTON (NOW MATCHES NAV)
+========================= */
+.logout-btn {
+  border: none;
+  cursor: pointer;
+
+  padding: 10px 14px;
+  border-radius: 14px;
+
+  font-size: 14px;
+  font-weight: 850;
+  color: var(--b900);
+
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  box-shadow: 0 10px 24px rgba(2, 25, 75, 0.10);
+
+  transition: all 0.18s ease;
+}
+
+.logout-btn:hover {
+  background: linear-gradient(135deg, var(--b700), var(--b600));
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 16px 36px rgba(37, 99, 235, 0.30);
+}
+
+.logout-btn:active {
+  transform: scale(0.97);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 860px) {
+  .navbar {
+    padding: 12px 14px;
+  }
+
+  .nav-link,
+  .logout-btn {
+    padding: 9px 11px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 560px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nav-links {
+    width: 100%;
+  }
+
+  .nav-link,
+  .logout-btn {
+    width: 100%;
+  }
+}

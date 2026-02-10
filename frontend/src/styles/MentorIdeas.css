@@ -1,0 +1,361 @@
+.mentor-container {
+  max-width: 1100px;
+  margin: 36px auto;
+  padding: 0 18px 60px;
+  font-family: "Poppins", sans-serif;
+  animation: fadeIn 0.45s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.mentor-header {
+  margin-bottom: 18px;
+  padding: 20px 22px;
+  background: #ffffff;
+  border: 1px solid #e6eefc;
+  border-radius: 16px;
+  box-shadow: 0 14px 30px rgba(2, 25, 75, 0.06);
+}
+
+.title {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  color: #0b2a6b;
+  letter-spacing: 0.2px;
+}
+
+.subtitle {
+  margin-top: 6px;
+  margin-bottom: 0;
+  color: #5b6b8a;
+  font-size: 14px;
+}
+
+.loading,
+.empty {
+  text-align: center;
+  margin-top: 30px;
+  color: #5b6b8a;
+  font-weight: 500;
+}
+
+.idea-card {
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #e6eefc;
+  box-shadow: 0 18px 40px rgba(2, 25, 75, 0.07);
+  padding: 22px;
+  margin-top: 18px;
+  position: relative;
+  overflow: hidden;
+  animation: cardPop 0.35s ease;
+}
+
+@keyframes cardPop {
+  from { opacity: 0; transform: scale(0.985); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* subtle left accent line */
+.idea-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 18px;
+  bottom: 18px;
+  width: 5px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #1d4ed8, #60a5fa);
+  opacity: 0.95;
+}
+
+.idea-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  padding-left: 10px;
+}
+
+.idea-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0b2a6b;
+}
+
+.meta {
+  margin: 6px 0 0;
+  color: #5b6b8a;
+  font-size: 14px;
+}
+
+.meta span,
+.desc span,
+.studentText span {
+  color: #0b2a6b;
+  font-weight: 600;
+}
+
+.desc {
+  margin: 14px 0 0;
+  padding-left: 10px;
+  color: #334155;
+  line-height: 1.55;
+  font-size: 14px;
+}
+
+/* status pill */
+.pill {
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.2px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.status-pending,
+.status-reviewed,
+.status-approved,
+.status-rejected {
+  text-transform: capitalize;
+}
+
+.status-pending {
+  background: #f2f7ff;
+  color: #1d4ed8;
+  border-color: #cfe0ff;
+}
+
+.status-reviewed {
+  background: #f8fafc;
+  color: #334155;
+  border-color: #e2e8f0;
+}
+
+.status-approved {
+  background: #eef8ff;
+  color: #0b2a6b;
+  border-color: #cfe0ff;
+}
+
+.status-rejected {
+  background: #fff5f5;
+  color: #7f1d1d;
+  border-color: #fecaca;
+}
+
+/* scores */
+.scores-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+  padding-left: 10px;
+}
+
+.scoreBox {
+  border: 1px solid #e6eefc;
+  border-radius: 14px;
+  padding: 14px 14px 12px;
+  background: #fbfdff;
+}
+
+.scoreLabel {
+  font-size: 13px;
+  color: #0b2a6b;
+  font-weight: 650;
+  margin-bottom: 8px;
+}
+
+.bar {
+  height: 10px;
+  background: #eaf1ff;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid #dbe7ff;
+}
+
+.fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #1d4ed8, #60a5fa);
+  transition: width 0.35s ease;
+}
+
+.scoreValue {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 650;
+  color: #0b2a6b;
+}
+
+/* student and file */
+.studentRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 14px;
+  padding-left: 10px;
+  flex-wrap: wrap;
+}
+
+.studentText {
+  margin: 0;
+  color: #334155;
+  font-size: 14px;
+}
+
+.file-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #dbe7ff;
+  background: #f6f9ff;
+  color: #1d4ed8;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.25s ease;
+}
+
+.file-link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 30px rgba(29, 78, 216, 0.18);
+  background: #ffffff;
+}
+
+/* mentor tools */
+.mentor-tools {
+  margin-top: 16px;
+  padding-left: 10px;
+  display: grid;
+  gap: 12px;
+}
+
+.analyze-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.analyze-box input {
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 12px;
+  border: 1.5px solid #cfe0ff;
+  background: #f9fbff;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.analyze-box input:focus {
+  outline: none;
+  border-color: #1d4ed8;
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.14);
+  background: #ffffff;
+}
+
+.analyze {
+  padding: 12px 14px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 650;
+  color: #ffffff;
+  background: linear-gradient(135deg, #0b2a6b, #1d4ed8);
+  transition: all 0.25s ease;
+}
+
+.analyze:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 36px rgba(29, 78, 216, 0.22);
+}
+
+.feedbackBox {
+  width: 100%;
+  min-height: 92px;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1.5px solid #cfe0ff;
+  background: #f9fbff;
+  font-size: 14px;
+  resize: vertical;
+  transition: all 0.2s ease;
+}
+
+.feedbackBox:focus {
+  outline: none;
+  border-color: #1d4ed8;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.14);
+}
+
+.btns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.btns button {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-weight: 650;
+  transition: all 0.25s ease;
+}
+
+.approve {
+  background: #0b2a6b;
+  color: #ffffff;
+}
+
+.approve:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 32px rgba(11, 42, 107, 0.25);
+}
+
+.reject {
+  background: #1d4ed8;
+  color: #ffffff;
+}
+
+.reject:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 32px rgba(29, 78, 216, 0.24);
+}
+
+.reviewed {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+  color: #334155;
+}
+
+.reviewed:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 30px rgba(2, 25, 75, 0.08);
+  background: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .scores-row {
+    grid-template-columns: 1fr;
+  }
+  .analyze-box {
+    grid-template-columns: 1fr;
+  }
+  .btns {
+    grid-template-columns: 1fr;
+  }
+}

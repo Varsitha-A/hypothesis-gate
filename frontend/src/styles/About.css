@@ -1,0 +1,144 @@
+.about-container {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  padding: 32px 22px 48px;
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   HERO
+========================= */
+.about-hero {
+  text-align: center;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #ffffff;
+  padding: 64px 24px;
+  border-radius: 16px;
+  margin-bottom: 46px;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.12);
+}
+
+.about-hero h1 {
+  font-size: 36px;
+  margin-bottom: 16px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+
+.about-hero p {
+  font-size: 18px;
+  line-height: 1.65;
+  max-width: 900px;
+  margin: 0 auto;
+  opacity: 0.95;
+}
+
+/* =========================
+   GENERIC SECTIONS
+========================= */
+.about-section {
+  max-width: 980px;
+  margin: 0 auto 44px auto;
+  background: #ffffff;
+  padding: 34px 34px 36px;
+  border-radius: 14px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+}
+
+.about-section h2 {
+  color: #1e3c72;
+  font-size: 28px;
+  margin-bottom: 18px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.about-section p {
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: #0d47a1;
+  text-align: justify;
+}
+
+/* =========================
+   LISTS (Objectives, Features, Benefits)
+========================= */
+.about-section ul {
+  list-style-type: disc;
+  padding-left: 28px;
+  margin-top: 14px;
+  color: #1565c0;
+  line-height: 1.7;
+}
+
+.about-section ul li {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+/* =========================
+   SUBTLE DIVIDER EFFECT
+========================= */
+.about-section:not(:last-child) {
+  position: relative;
+}
+
+.about-section:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 1px;
+  margin: 34px auto 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(30, 60, 114, 0.25),
+    transparent
+  );
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 22px 14px 40px;
+  }
+
+  .about-hero {
+    padding: 48px 18px;
+  }
+
+  .about-hero h1 {
+    font-size: 28px;
+  }
+
+  .about-hero p {
+    font-size: 16px;
+  }
+
+  .about-section {
+    padding: 24px 22px 26px;
+  }
+
+  .about-section h2 {
+    font-size: 24px;
+  }
+
+  .about-section p,
+  .about-section ul li {
+    font-size: 14.5px;
+  }
+}

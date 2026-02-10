@@ -1,0 +1,264 @@
+/* assignMentors.css */
+
+.assign-page {
+  max-width: 1100px;
+  margin: 18px auto 0;
+}
+
+.admin-toolbar {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(30, 58, 138, 0.12);
+  box-shadow: 0 14px 36px rgba(2, 6, 23, 0.07);
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  color: rgba(11, 27, 74, 0.78);
+  user-select: none;
+}
+
+.toggle input {
+  width: 42px;
+  height: 22px;
+  appearance: none;
+  background: rgba(37, 99, 235, 0.15);
+  border: 1px solid rgba(30, 58, 138, 0.18);
+  border-radius: 999px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.toggle input::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 1px;
+  left: 2px;
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 8px 18px rgba(2, 6, 23, 0.18);
+  transition: transform 0.2s ease;
+}
+
+.toggle input:checked {
+  background: rgba(37, 99, 235, 0.35);
+  border-color: rgba(37, 99, 235, 0.35);
+}
+
+.toggle input:checked::after {
+  transform: translateX(20px);
+}
+
+.assign-card {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1.4fr 0.9fr;
+  gap: 14px;
+  padding: 18px 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(30, 58, 138, 0.12);
+  box-shadow: 0 18px 45px rgba(2, 6, 23, 0.08);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.assign-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    600px 220px at 20% 0%,
+    rgba(37, 99, 235, 0.10),
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+.assign-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 24px 58px rgba(2, 6, 23, 0.12);
+}
+
+.assign-info {
+  position: relative;
+  z-index: 1;
+}
+
+.assign-title {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 900;
+  color: #0b1b4a;
+  letter-spacing: 0.2px;
+}
+
+.assign-line {
+  margin: 6px 0;
+  color: rgba(11, 27, 74, 0.78);
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.assign-line b {
+  color: rgba(11, 27, 74, 0.92);
+  font-weight: 900;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+  border: 1px solid rgba(30, 58, 138, 0.14);
+  background: rgba(37, 99, 235, 0.10);
+  color: #1e40af;
+  text-transform: capitalize;
+}
+
+.status-pending {
+  background: rgba(245, 158, 11, 0.14);
+  border-color: rgba(245, 158, 11, 0.20);
+  color: #9a3412;
+}
+
+.status-reviewed {
+  background: rgba(37, 99, 235, 0.12);
+  border-color: rgba(37, 99, 235, 0.18);
+  color: #1e40af;
+}
+
+.status-approved {
+  background: rgba(34, 197, 94, 0.14);
+  border-color: rgba(34, 197, 94, 0.22);
+  color: #166534;
+}
+
+.status-rejected {
+  background: rgba(239, 68, 68, 0.14);
+  border-color: rgba(239, 68, 68, 0.22);
+  color: #991b1b;
+}
+
+.assign-actions {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.assign-actions select {
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(30, 58, 138, 0.16);
+  background: rgba(248, 250, 252, 0.9);
+  color: rgba(11, 27, 74, 0.88);
+  font-weight: 800;
+  outline: none;
+  transition: box-shadow 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.assign-actions select:focus {
+  border-color: rgba(37, 99, 235, 0.45);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.14);
+  background: #ffffff;
+}
+
+.btn {
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-weight: 900;
+  cursor: pointer;
+  border: 1px solid rgba(30, 58, 138, 0.18);
+  background: rgba(255, 255, 255, 0.86);
+  color: #0b1b4a;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  box-shadow: 0 12px 28px rgba(2, 6, 23, 0.06);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 42px rgba(2, 6, 23, 0.12);
+  background: #ffffff;
+}
+
+.btn:active {
+  transform: translateY(0px) scale(0.99);
+}
+
+.btn-primary {
+  border: none;
+  background: linear-gradient(135deg, #1e40af, #2563eb);
+  color: #ffffff;
+  box-shadow: 0 16px 38px rgba(37, 99, 235, 0.28);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 20px 46px rgba(37, 99, 235, 0.36);
+}
+
+.btn-outline {
+  background: rgba(255, 255, 255, 0.86);
+}
+
+.empty {
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px dashed rgba(30, 58, 138, 0.20);
+  color: rgba(11, 27, 74, 0.75);
+  font-weight: 800;
+}
+
+@media (max-width: 980px) {
+  .assign-card {
+    grid-template-columns: 1fr;
+  }
+
+  .assign-actions {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .assign-actions select {
+    flex: 1;
+  }
+
+  .btn {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 560px) {
+  .admin-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .assign-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

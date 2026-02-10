@@ -1,0 +1,210 @@
+/* General Container */
+.home-container {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  padding: 20px;
+  animation: fadeIn 0.8s ease;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  padding: 60px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+}
+
+.hero-section h1 {
+  font-size: 38px;
+  margin-bottom: 15px;
+  animation: fadeIn 1s ease;
+}
+
+.hero-section p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.login-message {
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* Features Section */
+.features-section {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.features-section h2 {
+  color: #1e3c72;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.feature-card {
+  background: #e3f2fd;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.feature-card h3 {
+  color: #1565c0;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: #0d47a1;
+  line-height: 1.5;
+}
+
+/* Dashboard Preview */
+.dashboard-preview {
+  margin-bottom: 50px;
+}
+
+.dashboard-preview h2 {
+  color: #1e3c72;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.dashboard-preview p {
+  font-size: 15px;
+  margin-bottom: 20px;
+  color: #37474f;
+}
+
+.idea-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.idea-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.idea-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.idea-card h4 {
+  margin-bottom: 8px;
+  color: #1e3c72;
+}
+
+.idea-card p.status {
+  font-weight: 500;
+  color: #0d47a1;
+}
+
+/* Announcements Section */
+.announcements-section {
+  margin-bottom: 50px;
+}
+
+.announcements-section h2 {
+  color: #1e3c72;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.announcements-section ul {
+  list-style-type: disc;
+  padding-left: 25px;
+}
+
+.announcements-section li {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #1565c0;
+}
+
+/* Steps Section */
+.steps-section {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.steps-section h2 {
+  color: #1e3c72;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.step-card {
+  background: #e3f2fd;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.step-card h3 {
+  color: #1565c0;
+  margin-bottom: 10px;
+}
+
+.step-card p {
+  font-size: 14px;
+  color: #0d47a1;
+  line-height: 1.5;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .features-grid, .steps-grid, .idea-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-section h1 {
+    font-size: 30px;
+  }
+
+  .hero-section p {
+    font-size: 16px;
+  }
+}
