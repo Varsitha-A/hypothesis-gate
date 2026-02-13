@@ -24,51 +24,7 @@ const About = () => {
           accountability, and efficient collaboration between students and mentors.
         </p>
       </section>
-
-      {/* Key Features */}
-      <section className="about-section">
-        <h2>Key Features</h2>
-        <ul>
-          <li>Structured idea submission (text, PDF, document formats).</li>
-          <li>Mentor assignment, review, and feedback workflows.</li>
-          <li>Status tracking: pending, reviewed, approved, rejected.</li>
-          <li>Secure real-time communication between students and mentors.</li>
-          <li>Administrative monitoring and user management.</li>
-        </ul>
-      </section>
-
-      {/* Security */}
-      <section className="about-section">
-        <h2>Security & Access Control</h2>
-        <p>
-          Hypothesis-Gate enforces role-based access control, protected APIs,
-          and secure authentication to ensure data confidentiality and integrity
-          across all user roles.
-        </p>
-      </section>
-
-      {/* Benefits */}
-      <section className="about-section">
-        <h2>Benefits</h2>
-        <ul>
-          <li>Improves efficiency and clarity in research idea evaluation.</li>
-          <li>Ensures transparent mentor–student collaboration.</li>
-          <li>Maintains a complete digital record of ideas and feedback.</li>
-          <li>Scalable for institutional academic use.</li>
-        </ul>
-      </section>
-
-      {/* Conclusion */}
-      <section className="about-section">
-        <h2>Conclusion</h2>
-        <p>
-          Hypothesis-Gate provides a reliable and structured approach to academic
-          research management, enabling institutions to streamline idea evaluation
-          while maintaining security, transparency, and accountability.
-        </p>
-      </section>
-
-    </div>
+</div>
   );
 };
 
